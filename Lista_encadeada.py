@@ -25,7 +25,7 @@ class Lista_vagas:
             count += 1
             if count >= 6:
                 break
-            print(f"Número do Apartamento: {ap.numero_ap} \nNúmero da Vaga: {ap.vaga}")
+            print(f"Número da Vaga: {ap.vaga} \nNúmero do Apartamento: {ap.numero_ap} - ID: {ap.id}")
             ap = ap.proximo
         
            

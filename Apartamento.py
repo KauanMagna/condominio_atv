@@ -7,3 +7,4 @@ class Apartamento:
     
     #def cadastrar_ap():
     #def imprimir_ap():
+    
