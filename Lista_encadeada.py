@@ -8,15 +8,20 @@ class Lista_vagas:
     def add_apartamento(self, cod, numero_ap):
         if self.inicio is None:
             self.inicio = Apartamento(cod, numero_ap)
-            self.tamanho += 1
             ap = self.inicio
             ap.vaga = 1
         elif self.inicio is not None:
-            ap = self.inicio 
+            ap = self.inicio
             while ap.proximo:
                 ap = ap.proximo
-            ap.proximo = Apartamento(cod, numero_ap)
-            ap.proximo.vaga = ap.vaga + 1
+            if ap.vaga <= 3:
+                ap.proximo = Apartamento(cod, numero_ap)
+                ap.proximo.vaga = ap.vaga + 1
+            else:
+                apart = Apartamento(cod, numero_ap)
+                print("estourou o número de vagas")
+                return apart
+        self.tamanho += 1
              
     def imprimir_vagas(self):
         ap = self.inicio
@@ -27,6 +32,8 @@ class Lista_vagas:
                 break
             print(f"Número da Vaga: {ap.vaga} \nNúmero do Apartamento: {ap.numero_ap} - ID: {ap.id}")
             ap = ap.proximo
+            
+            
         
            
     def liberar_vaga(self, vaga):

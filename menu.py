@@ -1,6 +1,7 @@
 import random
 from Apartamento import Apartamento 
 from Lista_encadeada import Lista_vagas
+from Fila import Fila
 
 
 menu_principal_string = """
@@ -16,6 +17,7 @@ Menu Principal
 
 def menu_principal():
     lista = Lista_vagas()
+    fila = Fila()
     while True:
         print(menu_principal_string)
         escolha = int(input("Escolha uma opção: "))
@@ -28,7 +30,7 @@ def menu_principal():
         elif escolha == 3:
             lista.imprimir_vagas()
         elif escolha == 4:
-            pass
+            fila.imprimir_fila()
         elif escolha == 0:
             break
 

@@ -2,15 +2,8 @@ from Torre import Torre
 from Apartamento import Apartamento 
 from Lista_encadeada import Lista_vagas
 from menu import menu_principal
+from Fila import Fila
 
-"""
-01- Criar classes Torre e Apartamento
-02- Criar uma lista encadeada para as vagas
-03- Criar uma fila para a espera
-        a- método para adicionar ap na fila
-        b- método para tirar o ap da fila
-        c- método para imprimir a fia
-"""
 menu_principal()
 # lista = Lista_vagas()
 # lista.add_apartamento(1010, 10)
@@ -22,3 +15,14 @@ menu_principal()
 # lista.imprimir_vagas()
 # lista.liberar_vaga(int(input("Vaga: ")))
 # #lista.imprimir_vagas()
+
+# fila = Fila()
+# apat01 = Apartamento(12, 1234)
+# apat02 = Apartamento(14, 5678)
+# apat03 = Apartamento(15, 9102)
+
+# fila.adicionar(apat01)
+# fila.adicionar(apat03)
+# fila.imprimir_fila()
+# fila.adicionar(apat02)
+# fila.imprimir_fila()
