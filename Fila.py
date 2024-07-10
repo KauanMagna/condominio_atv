@@ -6,7 +6,9 @@ class Fila:
         self.final = None
         self.tamanho = 0
 
-
+def abrir():
+    print("yeah")
+    
     
 
     
