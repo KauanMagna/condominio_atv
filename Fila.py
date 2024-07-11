@@ -1,4 +1,3 @@
-from Apartamento import Apartamento
 
 class Fila:
     def __init__(self):
@@ -25,5 +24,15 @@ class Fila:
                 print(f"Número do apartamento: {ap.numero_ap}")
                 ap = ap.proximo
             
-    #def remover_fila(self):
-        
+    def remover_fila(self):
+        if self.tamanho == 0:
+            print("A fila está vazia.")
+            return None
+        else:
+            removido = self.inicio
+            self.inicio = self.inicio.proximo
+            if self.inicio is None:
+                self.final = None
+            self.tamanho -= 1
+            removido.proximo = None
+            return removido

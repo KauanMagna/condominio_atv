@@ -4,5 +4,6 @@ class Torre:
         self. nome = nome
         self.endereco = endereco
         
-        #def cadastrar():
-        #def imprimir()
+        
+        def __str__(self):
+            return (f"Torre ID: {self.id}, Nome: {self.nome}, Endereço: {self.endereco}, Quantidade de Apartamentos: {len(self.apartamentos)}")
