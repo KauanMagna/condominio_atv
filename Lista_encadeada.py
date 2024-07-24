@@ -17,7 +17,7 @@ class Lista_vagas:
             ap = self.inicio
             while ap.proximo:
                 ap = ap.proximo
-            if ap.vaga <= 9:
+            if ap.vaga <= 3:
                 ap.proximo = Apartamento(cod, numero_ap, torre)
                 ap.proximo.vaga = ap.vaga + 1
             else:
@@ -54,6 +54,7 @@ class Lista_vagas:
                 else:
                     anterior.proximo = apartamento_novo
                 print(f"\nApartamento Novo na vaga: {vaga} \nNúmero: {apartamento_novo.numero_ap} Vaga e próximo: {apartamento_novo.vaga}, {apartamento_novo.proximo}")
+                ap.proximo = None
                 return ap
             anterior = ap
             ap = ap.proximo
